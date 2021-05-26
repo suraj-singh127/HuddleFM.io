@@ -1,0 +1,439 @@
+:root{
+    --primary: hsl(322, 100%, 66%);
+    --paleCyan:hsl(193, 100%, 96%);
+    --darkCyan:hsl(192, 100%, 9%);
+    --grayishBlue:hsl(208, 11%, 55%);
+    --transitionSpeed:600ms;
+    font-size: 18px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+ }
+ body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+#top{
+    padding: 3rem;
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'intro intro intro';
+    position: relative;
+}
+.main::before{
+    content: "";
+    background-image: url(images/bg-hero-desktop.svg);
+    background-color: rgb(237, 251, 254);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////// Header has been designed here/////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+header img{
+    position: relative;
+    margin-left: 1.1rem;
+}
+
+#tryitfree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;   
+    padding: 0.5rem 0;
+    border-radius: 2.5rem;
+    box-shadow:0 0 10px rgb(206, 197, 197);
+    width: 8rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    transition: transform scale var(--transitionSpeed);
+    margin-right: 1.1rem;   
+}
+#tryitfree:hover{
+    color: gray;
+    transform: translate(-1px,-1px);
+    transform: scale(1.05);
+}
+button span{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////Intro Container has been designed here/////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.introContainer{
+    grid-area: intro;
+    display: grid;
+    grid-template-areas:
+    'main main image image image'
+    'main main image image image';
+    font-family: 'Poppins', sans-serif;
+}
+
+.introContent{
+    /* border: 2px solid black; */
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1.3rem;
+}
+.introContent h1{
+    font-size: 2.3rem;
+}
+.introContainer p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+#getStarted{
+    margin-top: 1.2rem;
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     border: none;
+     background-color: var(--primary);   
+     padding: 0.7rem 1rem;
+     border-radius: 2.5rem;
+     box-shadow:0 0 10px rgb(206, 197, 197);
+     height: 2.7rem;
+     width: 15rem;
+     font-size: .8rem;
+     white-space: nowrap;
+     font-family: 'Open Sans', sans-serif;
+     color: var(--paleCyan);
+     font-weight: 600;
+     transition: transform scale var(--transitionSpeed);  
+}
+
+#getStarted:hover{
+   background-color: hsl(322, 100%, 77%);
+   transform: translate(-1px,-1px);
+   transform: scale(1.05);
+}
+
+.image{
+    grid-area: image;
+    /* border: 2px solid black; */
+}
+
+.image img{
+    padding: 3rem;
+    width: 40rem;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////Mid Section start here ////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////*/
+#middle{
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+}
+.contentContainers{
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-areas: 
+    'writing writing image';
+    margin: 2.4rem 6.2rem;
+    border-radius: 1.5rem;
+    box-shadow:0 0 12px rgb(206, 197, 197);
+}
+.contentContainers h1{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0;
+    color: var(--darkCyan);
+}
+.contentContainers p{
+    font-family: 'Open Sans','sans-serif';
+    color: var(--grayishBlue);
+}
+
+#rightAlign{
+    grid-template-areas: 
+    'image writing writing';
+}
+.illustrations{
+    grid-area: image;
+    /* border: 2px solid black; */
+    padding: 2rem 3rem;
+    margin: 0 0 0 0;
+}
+.illustrations img{
+    width: 21rem;
+}
+.writing{
+    grid-area: writing;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    padding: 3rem 2rem;
+    margin: 0rem 3rem 0rem 4rem;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////Invitation Section goes here///////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.invi-container{
+    align-self: center;
+    position:relative;
+    z-index: 1;
+}
+
+#invitation{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45rem;
+    height: 11rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow:0 0 10px rgba(46, 46, 46, 0.514);
+}
+
+#invitation h1{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////Last Section starts here //////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.lastSection{
+  border: 2px solid black;
+  display: grid;
+  gap: 0.2rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(33%,1fr));
+  margin-top: -4rem;
+  color: var(--paleCyan);
+  font-family: 'Open Sans','sans-serif';
+  background-color: var(--darkCyan);
+  padding-left: 12rem;
+  overflow-y: hidden;
+}
+
+.logo {
+    grid-column: span 3 / auto;
+    margin: 0 0 0 0;
+    padding-top: 7rem;
+    padding-left: 1rem;
+}
+
+.info{
+    display: grid;
+    /* border: 2px solid black; */
+    /* padding-left: 1rem; */
+}
+
+.info svg{
+    width: 1rem;
+    min-width: 1rem;
+}
+
+.info li{
+    list-style: none;
+    margin:0.5rem 0rem;
+    display: flex;
+}
+
+.info .infoText{
+    display: block;
+    width: 15rem;
+    margin: 0rem 1rem;
+}
+
+.navlist ul{
+    padding-left: 0.8rem;
+    margin: 0 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+}
+
+.navlist li{
+   list-style:none;
+   margin: 0.5rem 0;
+}
+
+.navlist a{
+    text-decoration: none;
+    color: white;
+}
+.navlist a:hover{
+    text-decoration: underline;
+}
+
+
+.social{
+    /* border: 2px solid black; */
+    padding: 2rem 0 2rem 0;
+}
+
+.social .ionicon{
+    fill: white;
+    width: 1rem;
+    padding: 0.4rem;
+    margin: 1px 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.social .ionicon:hover{
+    fill: hsl(322, 100%, 66%);
+    border-color: var(--primary);
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////For Tablet Screens ////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+  
+@media only screen and (max-width:1275px){
+    .main::before{
+        content: "";
+        background-image: url(images/bg-hero-mobile.svg);
+        background-color: rgb(237, 251, 254);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    .introContainer{
+        grid-template-areas: 
+        'main main main'
+        'image image image';
+        text-align: center;
+    }
+    .introContent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .introContent h1{
+        font-size: 1.5rem;
+    }
+    .contentContainers,#rightAlign{
+        grid-template-areas:
+        'image image image'
+        'writing writing writing';
+        text-align: center;
+    }
+    #invitation{
+        width: 22rem;
+        height: 10rem;
+    }
+    
+    #invitation h1{
+        font-size: 1.1rem;
+     }
+     .lastSection{
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+}
+  /*////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////For midrange Screens ////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////*/
+  
+    @media only screen and (max-width:900px){
+    
+    header img{
+        width: 6rem;
+        height: 1rem;
+    }
+    .introContainer img{
+        padding: 0;
+        width: 19rem;
+    }
+    #invitation{
+        width: 18rem;
+        height: 10rem;
+    }
+    
+    #invitation h1{
+        font-size: 1rem;
+     }
+    .contentContainers{
+        margin-right:  1rem;
+        margin-left: 1rem;
+    }
+    .lastSection{
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+    /*////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////For small Screens ////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////*/
+
+    @media only screen and (max-width:600px) {
+        #top{
+            padding: 5px;
+            margin: 0;
+        }
+        .introContent{
+            padding: 3rem 0.6rem;
+        }
+        .introContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+        .contentContainers{
+            margin-right:  1rem;
+            margin-left: 1rem;
+        }
+        .writing{
+            padding: -0.2px;
+            margin: 0;
+        }
+        .illustrations img{
+            width: 12rem;
+        }
+        .lastSection{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
