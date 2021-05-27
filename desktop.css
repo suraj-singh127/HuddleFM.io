@@ -100,7 +100,7 @@ button span{
     justify-content: center;
     padding: 3rem 1.3rem;
 }
-.introContent h1{
+.introContent h2{
     font-size: 2.3rem;
 }
 .introContainer p{
@@ -161,7 +161,7 @@ button span{
     border-radius: 1.5rem;
     box-shadow:0 0 12px rgb(206, 197, 197);
 }
-.contentContainers h1{
+.contentContainers h2{
     font-family: 'Poppins', sans-serif;
     margin-bottom: 0;
     color: var(--darkCyan);
@@ -216,7 +216,7 @@ button span{
     box-shadow:0 0 10px rgba(46, 46, 46, 0.514);
 }
 
-#invitation h1{
+#invitation h2{
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
     white-space: nowrap;
@@ -239,6 +239,10 @@ button span{
   background-color: var(--darkCyan);
   padding-left: 12rem;
   overflow-y: hidden;
+}
+
+.lastSection h2{
+   display:none;
 }
 
 .logo {
@@ -339,7 +343,7 @@ button span{
         align-items: center;
         justify-content: center;
     }
-    .introContent h1{
+    .introContent h2{
         font-size: 1.5rem;
     }
     .contentContainers,#rightAlign{
@@ -353,7 +357,7 @@ button span{
         height: 10rem;
     }
     
-    #invitation h1{
+    #invitation h2{
         font-size: 1.1rem;
      }
      .lastSection{
@@ -386,7 +390,7 @@ button span{
         height: 10rem;
     }
     
-    #invitation h1{
+    #invitation h2{
         font-size: 1rem;
      }
     .contentContainers{
