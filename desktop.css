@@ -108,7 +108,7 @@ button span{
     font-weight: 400;
 }
 
-#getStarted{
+.getStarted{
     margin-top: 1.2rem;
     display: flex;
      justify-content: center;
@@ -128,7 +128,7 @@ button span{
      transition: transform scale var(--transitionSpeed);  
 }
 
-#getStarted:hover{
+.getStarted:hover{
    background-color: hsl(322, 100%, 77%);
    transform: translate(-1px,-1px);
    transform: scale(1.05);
